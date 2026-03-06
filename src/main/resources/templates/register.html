@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Register</title>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Register</h2>
+
+<input type="text" id="name" placeholder="Name">
+
+<br><br>
+
+<input type="email" id="email" placeholder="Email">
+
+<br><br>
+
+<input type="password" id="password" placeholder="Password">
+
+<br><br>
+
+<select id="role">
+
+<option value="ADMIN">Admin</option>
+<option value="STAFF">Staff</option>
+
+</select>
+
+<br><br>
+
+<button onclick="registerUser()">Register</button>
+
+</div>
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>

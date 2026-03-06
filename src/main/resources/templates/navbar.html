@@ -1,0 +1,22 @@
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/orders">Orders</a>
+
+<a href="/menu">Menu</a>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+<script>
+
+function logout(){
+
+localStorage.removeItem("token");
+window.location.href="/login";
+
+}
+
+</script>

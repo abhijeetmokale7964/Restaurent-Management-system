@@ -1,0 +1,99 @@
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6f8;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#1f2937;
+padding:15px 40px;
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.nav-links a:hover{
+color:#facc15;
+}
+
+
+/* AUTH BUTTONS */
+
+.auth-buttons{
+display:flex;
+gap:10px;
+}
+
+.btn{
+padding:8px 18px;
+border-radius:5px;
+text-decoration:none;
+font-size:14px;
+}
+
+.login-btn{
+background:#3b82f6;
+color:white;
+}
+
+.register-btn{
+background:#10b981;
+color:white;
+}
+
+.btn:hover{
+opacity:0.8;
+}
+
+
+/* DASHBOARD */
+
+.container{
+padding:40px;
+text-align:center;
+}
+
+.dashboard-cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+font-size:24px;
+font-weight:bold;
+color:#2563eb;
+}

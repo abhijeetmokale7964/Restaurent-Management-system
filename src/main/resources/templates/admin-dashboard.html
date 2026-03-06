@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Admin Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f5f5f5;
+}
+
+.navbar{
+background:#2ecc71;
+padding:15px;
+display:flex;
+justify-content:space-between;
+color:white;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 5px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div>
+Restaurant Admin
+</div>
+
+<div>
+
+<span id="username"></span>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Menu Management</h3>
+</div>
+
+<div class="card">
+<h3>Reports</h3>
+</div>
+
+<div class="card">
+<h3>Billing</h3>
+</div>
+
+<div class="card">
+<h3>Manage Staff</h3>
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("username").innerText =
+"Welcome "+localStorage.getItem("email");
+
+function logout(){
+
+localStorage.clear();
+
+window.location.href="/login";
+
+}
+
+</script>
+
+</body>
+
+</html>

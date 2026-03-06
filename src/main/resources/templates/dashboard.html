@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Restaurant Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f5f5f5;
+}
+
+.navbar{
+background:#2c3e50;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div>Restaurant Dashboard</div>
+
+<div>
+<span id="user"></span>
+<button onclick="logout()">Logout</button>
+</div>
+
+</div>
+
+<div class="cards" id="tasks"></div>
+
+<script>
+
+let role = localStorage.getItem("role");
+let email = localStorage.getItem("email");
+
+document.getElementById("user").innerText="Welcome "+email;
+
+let tasks = document.getElementById("tasks");
+
+if(role === "ADMIN"){
+
+tasks.innerHTML = `
+
+<div class="card">Menu Management</div>
+<div class="card">Reports</div>
+<div class="card">Billing</div>
+<div class="card">Manage Staff</div>
+<div class="card">View Orders</div>
+
+`;
+
+}
+
+if(role === "STAFF"){
+
+tasks.innerHTML = `
+
+<div class="card">Take Order</div>
+<div class="card">Table Booking</div>
+<div class="card">Kitchen Status</div>
+
+`;
+
+}
+
+function logout(){
+localStorage.clear();
+window.location.href="/login";
+}
+
+</script>
+
+</body>
+</html>
