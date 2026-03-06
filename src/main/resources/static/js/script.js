@@ -1,4 +1,4 @@
-document.getElementById("loginForm").addEventListener("submit", function(e){
+/*document.getElementById("loginForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
@@ -39,4 +39,4 @@ alert("Login Error");
 console.log(err);
 });
 
-});
+});*/

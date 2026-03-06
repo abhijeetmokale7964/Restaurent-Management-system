@@ -31,17 +31,17 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
 
                 // PUBLIC PAGES
-            		.requestMatchers(
-            		        "/",
-            		        "/login",
-            		        
-            		        "/register",
-            		        "/admin/**",
-            		        "/staff/**",
-            		        "/css/**",
-            		        "/js/**",
-            		        "/images/**"
-            		).permitAll()
+//            		.requestMatchers(
+//            		        "/",
+//            		        "/login",
+//            		        
+//            		        "/register",
+//            		        "/admin/**",
+//            		        "/staff/**",
+//            		        "/css/**",
+//            		        "/js/**",
+//            		        "/images/**"
+//            		).permitAll()
 
                 // API AUTH
                 .requestMatchers("/api/auth/**").permitAll()
@@ -49,7 +49,7 @@ public class SecurityConfig {
                 // ROLE BASED
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                 
-                .requestMatchers("/api/staff/**").hasAnyRole("ADMIN","STAFF")
+                .requestMatchers("/api/admin/**").hasAnyRole("ADMIN","STAFF")
 
                 .anyRequest().authenticated()
             )

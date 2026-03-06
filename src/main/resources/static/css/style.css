@@ -1,11 +1,11 @@
-body{
+/* body{
 margin:0;
 font-family:Arial;
 background:#f4f6f8;
 }
 
 
-/* NAVBAR */
+NAVBAR
 
 .navbar{
 display:flex;
@@ -38,7 +38,7 @@ color:#facc15;
 }
 
 
-/* AUTH BUTTONS */
+AUTH BUTTONS
 
 .auth-buttons{
 display:flex;
@@ -67,7 +67,7 @@ opacity:0.8;
 }
 
 
-/* DASHBOARD */
+DASHBOARD
 
 .container{
 padding:40px;
@@ -96,4 +96,4 @@ margin-bottom:10px;
 font-size:24px;
 font-weight:bold;
 color:#2563eb;
-}
+} */
