@@ -5,8 +5,8 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.restaurant.entity.Role;
 import com.restaurant.entity.User;
+import com.restaurant.enums.Role;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 	

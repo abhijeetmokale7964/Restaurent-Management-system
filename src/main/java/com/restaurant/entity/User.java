@@ -11,6 +11,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 //import java.util.List;
 
+import com.restaurant.enums.Role;
+
 @Entity
 @Table(name = "users",
        uniqueConstraints = {

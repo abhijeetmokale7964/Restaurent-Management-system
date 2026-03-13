@@ -46,6 +46,13 @@ public class SecurityConfig {
                 // API AUTH
                 .requestMatchers("/api/auth/**").permitAll()
 
+                //MenuItem without securiety
+                
+                .requestMatchers("/api/menu/**").permitAll()
+                
+                //Table 
+                .requestMatchers("/api/tables/**").permitAll()
+                
                 // ROLE BASED
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                 
